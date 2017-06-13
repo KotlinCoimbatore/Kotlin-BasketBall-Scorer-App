@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="me.lakshmanan.testapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Team A"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            <Button
+                android:id="@+id/TeamA1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 Pointer"
+                android:onClick="updateScoreA1"/>
+            <Button
+                android:id="@+id/TeamA2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 Pointer"
+                android:onClick="updateScoreA2"/>
+            <Button
+                android:id="@+id/TeamA3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3 Pointer"
+                android:onClick="updateScoreA3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Score"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            <TextView
+                android:id="@+id/scoreTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Team B"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            <Button
+                android:id="@+id/TeamB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 Pointer"
+                android:onClick="updateScoreB1"/>
+            <Button
+                android:id="@+id/TeamB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 Pointer"
+                android:onClick="updateScoreB2"/>
+            <Button
+                android:id="@+id/TeamB3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3 Pointer"
+                android:onClick="updateScoreB3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Score"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            <TextView
+                android:id="@+id/scoreTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Reset"
+        android:layout_marginBottom="32dp"
+        android:onClick="reset"/>
+</RelativeLayout>
