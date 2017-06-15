@@ -1,18 +1,23 @@
 package me.lakshmanan.testapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
+import java.security.AccessController.getContext
+import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
 
+    val mydb = DBHelper(this)
     var TeamAScore = 0
     var TeamBScore = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         displayScores()
+        
     }
 
     fun addScore(team:Int,point:Int){
@@ -37,12 +42,20 @@ class MainActivity : AppCompatActivity() {
         TeamBScore = 0
         displayScores()
     }
-    fun displayScores(){
-        var scoreA = findViewById(R.id.scoreTeamA) as TextView
-        scoreA.text = TeamAScore.toString()
 
-        var scoreB = findViewById(R.id.scoreTeamB) as TextView
-        scoreB.text = TeamBScore.toString()
+    fun save(view: View):Unit{
+        mydb.insertScores(TeamAScore,TeamBScore)
+        val intent: Intent = Intent(this, RecordsView::class.java)
+        startActivity(intent)
+    }
+    fun displayScores(){
+        scoreTeamA.text = ""+TeamAScore
+        scoreTeamB.text = ""+TeamBScore
     }
 
 }
+
+
+
+
+

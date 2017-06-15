@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Basketball Scorer App</string>
+    <string name="title_activity_records_view">RecordsView</string>
 </resources>
